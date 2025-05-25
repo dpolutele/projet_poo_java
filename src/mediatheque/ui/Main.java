@@ -7,16 +7,25 @@ import java.util.List;
 import javax.swing.*;
 import mediatheque.model.*;
 
+/**
+ * Fenêtre principale de l'application.
+ * Permet d'afficher, filtrer et emprunter des documents via une interface graphique.
+ */
 public class Main extends JFrame {
     private List<Document> supports = new ArrayList<>();
     private JTextArea affichage;
 
+    /**
+     * Constructeur de la fenêtre principale.
+     * Initialise l'interface et charge les documents (livres, CDs, DVDs).
+     */
     public Main() {
         setTitle("Médiathèque");
         setSize(900, 550);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
 
+        // Création des documents
         supports.add(new Livre("1984", "George Clowney", 1949));
         supports.add(new Livre("Le Petit Prince", "Aymeric Boutin", 1943));
         supports.add(new Livre("La Guerre des Boutins", "Mathieu Galois", 2024));
@@ -30,13 +39,16 @@ public class Main extends JFrame {
         supports.add(new DVD("Harry Potter III", "Christopher Oconor", 2012));
         supports.add(new DVD("Harry Potter IV", "Christopher Oconor", 2013));
 
+        // Zone d'affichage
         affichage = new JTextArea();
         affichage.setEditable(false);
         JScrollPane scrollPane = new JScrollPane(affichage);
         add(scrollPane, BorderLayout.CENTER);
 
+        // Barre de boutons
         JPanel boutons = new JPanel(new FlowLayout());
 
+        // Ajout des boutons avec actions
         ajouterBouton(boutons, "Nouvel emprunt", e -> nouvelEmprunt());
         ajouterBouton(boutons, "Afficher tous", e -> afficher(supports));
         ajouterBouton(boutons, "Afficher empruntés", e -> {
@@ -53,12 +65,22 @@ public class Main extends JFrame {
         add(boutons, BorderLayout.SOUTH);
     }
 
+    /**
+     * Ajoute un bouton à un panneau avec un texte et une action à effectuer.
+     *
+     * @param panel Le panneau sur lequel ajouter le bouton.
+     * @param label Le texte du bouton.
+     * @param action L'action à effectuer lorsqu'on clique.
+     */
     private void ajouterBouton(JPanel panel, String label, ActionListener action) {
         JButton bouton = new JButton(label);
         bouton.addActionListener(action);
         panel.add(bouton);
     }
 
+    /**
+     * Permet à un utilisateur de saisir ses informations et d'emprunter un document.
+     */
     private void nouvelEmprunt() {
         JTextField champNom = new JTextField();
         JTextField champPrenom = new JTextField();
@@ -76,7 +98,7 @@ public class Main extends JFrame {
 
         Utilisateur utilisateur = new Utilisateur(nom, prenom);
 
-        // Ne filtre plus les documents disponibles : on montre tout
+        // On propose tous les documents à l'utilisateur
         List<Document> disponibles = new ArrayList<>(supports);
 
         Document selection = (Document) JOptionPane.showInputDialog(
@@ -94,6 +116,11 @@ public class Main extends JFrame {
         }
     }
 
+    /**
+     * Affiche une liste de documents dans la zone de texte.
+     *
+     * @param liste La liste de documents à afficher.
+     */
     private void afficher(List<Document> liste) {
         StringBuilder sb = new StringBuilder();
         for (Document d : liste) {
@@ -102,6 +129,9 @@ public class Main extends JFrame {
         affichage.setText(sb.toString());
     }
 
+    /**
+     * Filtre les documents par type (Livre, CD, DVD) et les affiche.
+     */
     private void filtrerParType() {
         String[] types = {"Livre", "CD", "DVD"};
         String type = (String) JOptionPane.showInputDialog(this, "Choisissez un type:", "Filtrer", JOptionPane.PLAIN_MESSAGE, null, types, types[0]);
@@ -113,6 +143,9 @@ public class Main extends JFrame {
         afficher(filtres);
     }
 
+    /**
+     * Recherche les documents dont le titre contient une chaîne donnée.
+     */
     private void rechercherParTitre() {
         String titre = JOptionPane.showInputDialog(this, "Entrez le titre à rechercher:");
         if (titre == null || titre.isBlank()) return;
@@ -123,6 +156,11 @@ public class Main extends JFrame {
         afficher(resultats);
     }
 
+    /**
+     * Point d'entrée du programme. Lance l'interface graphique.
+     *
+     * @param args Arguments non utilisés ici.
+     */
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
             Main fenetre = new Main();
