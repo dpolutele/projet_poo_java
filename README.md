@@ -11,10 +11,7 @@
 
 🔧 Fonctionnalités principales :
 - 🆕 Ajout initial de documents (dans le main).
-- 📃 Affichage :
-  - Tous les documents,
-  - Documents empruntés,
-  - Documents disponibles.
+- 📃 Affichage : Tous les documents, Documents empruntés, Documents disponibles.
 - 🔎 Recherche de documents par titre.
 - 🧩 Filtrage par type de support (Livre, CD, DVD).
 - 🙋‍♂️ Gestion des emprunts par utilisateur (saisie nom & prénom).
@@ -29,45 +26,38 @@
 
 🚀 Lancer le projet :
 
-1. Assurez-vous d’avoir les dossiers suivants dans le projet :
+1. Clonez le dépôt depuis GitHub :
 
-   projet_poo_java_POLUTELE_DYLAN/  
-   ├── bin/  
-   └── src/  
-       └── mediatheque/  
-           ├── model/  
-           └── ui/  
+```bash/powershell```
 
-2. Ouvrir votre IDE (Eclipse, IntelliJ IDEA, NetBeans, VS code...).
-3. Ouvrir le dossier `projet_poo_java_POLUTELE_DYLAN`.
-4. Vérifier votre version de Java (à jour et bien configuré).
-5. Ouvrer un nouveau terminal au niveau du projet :
-# Compiler tous les fichiers .java du dossier src et sous-dossiers dans le dossier bin avec :
-javac -d bin (Get-ChildItem -Path src -Recurse -Filter *.java | ForEach-Object { $_.FullName })
+git clone https://github.com/dpolutele/projet_poo_java.git
+cd projet_poo_java
 
-# Se placer dans le dossier bin (dossier racine des classes compilées) : 
-cd bin
+2. Assurez-vous que le fichier JAR exécutable est présent dans le dépôt (mediatheque.jar).
 
-# Lancer l’application en précisant le package complet et la classe Main : 
-java mediatheque.ui.Main
+3. Lancez l’application via le fichier JAR :
+
+java -jar mediatheque.jar
+
+Astuce :
+Vous pouvez aussi lancer l'application directement dans votre IDE (Eclipse, IntelliJ IDEA, NetBeans, VS Code...) en ouvrant le dossier du projet et en exécutant la classe mediatheque.ui.Main (en lancant le RUN), assurez-vous également d'avoir une version de Java à jour et bien configuré (JAVA 16 ou +).
 
 
-# Vous pouvez également lancer l'application avec le `Run` mais assurez vous d'avoir bien compiler les fichiers.
+## Arborescence du projet : 
 
-
-🗂 Arborescence du projet :
-
-projet_poo_java_POLUTELE_DYLAN/  
+projet_poo_java/  
 ├── bin/                           → fichiers compilés (.class)  
-└── src/  
-    └── mediatheque/  
-        ├── model/                → classes métier : Document, Livre, CD, DVD, Utilisateur, etc.  
-        └── ui/  
-            └── Main.java         → interface graphique principale  
-
-# 👤Auteur :  
-# POLUTELE Dylan  
-# Université de la Nouvelle-Calédonie (UNC)  
-
+├── javadoc/                       → documentation générée (Javadoc)  
+├── src/  
+│   └── mediatheque/  
+│       ├── model/                → classes métier : Document, Livre, CD, DVD, Utilisateur, exceptions, etc.  
+│       └── ui/  
+│           └── Main.java         → interface graphique principale  
+├── mediatheque.jar           → fichier exécutable JAR  
+└── rapport.pdf                   → rapport du projet
 
 
+
+👤 Auteur :
+POLUTELE Dylan
+Licencec MIAGE - 2025 
