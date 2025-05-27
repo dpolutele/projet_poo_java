@@ -32,9 +32,9 @@
 
 2. Clonez le dépôt depuis GitHub :
 
-```bash/powershell```
 
 ## git clone https://github.com/dpolutele/projet_poo_java.git
+
 ## cd projet_poo_java
 
 3. Assurez-vous que le fichier JAR exécutable est présent dans le dépôt (mediatheque.jar).
@@ -45,7 +45,7 @@
 
 ## Astuce :
 
-Vous pouvez aussi lancer l'application directement en double cliquant sur le fichier .jar en ouvrant manuellement le dossier du projet.
+## Vous pouvez aussi lancer l'application directement en double cliquant sur le fichier .jar en ouvrant manuellement le dossier du projet.
 
 ## Arborescence du projet : 
 
