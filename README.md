@@ -26,7 +26,7 @@
 
 🚀 Lancer le projet :
 
-1. Assurez vous d'avoir une version Java récente (minimum Java 16) pour vérifier, lancer un terminal et executer la commande :
+1. Assurez vous d'avoir une version Java récente (minimum Java/JDK/JRE 16) pour vérifier, lancer un terminal et executer la commande :
 
 ## java --version
 
