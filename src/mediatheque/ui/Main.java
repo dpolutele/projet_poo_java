@@ -26,8 +26,8 @@ public class Main extends JFrame {
         setLayout(new BorderLayout());
 
         // Création des documents
-        supports.add(new Livre("1984", "George Clowney", 1949));
-        supports.add(new Livre("Le Petit Prince", "Aymeric Boutin", 1943));
+        supports.add(new Livre("1954", "David Clowney", 1949));
+        supports.add(new Livre("Le Petit Prince", "Jean Dubois", 1943));
         supports.add(new Livre("La Guerre des Boutins", "Mathieu Galois", 2024));
         supports.add(new Livre("Marsupilamine", "Lionnel Messi", 1949));
         supports.add(new CD("Thriller", "Michael Jackson", 1982));
