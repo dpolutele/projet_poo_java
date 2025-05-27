@@ -45,8 +45,7 @@
 
 ## Astuce :
 
-Vous pouvez aussi lancer l'application directement dans votre IDE (Eclipse, IntelliJ IDEA, NetBeans, VS Code...) en ouvrant le dossier du projet et en exécutant la classe mediatheque.ui.Main (en lancant le RUN).
-
+Vous pouvez aussi lancer l'application directement en double cliquant sur le fichier .jar en ouvrant manuellement le dossier du projet.
 
 ## Arborescence du projet : 
 
