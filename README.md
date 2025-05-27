@@ -35,17 +35,20 @@
 
 ## git clone https://github.com/dpolutele/projet_poo_java.git
 
+
+3. Placez-vous dans le dossier du projet : 
+
 ## cd projet_poo_java
 
-3. Assurez-vous que le fichier JAR exécutable est présent dans le dépôt (mediatheque.jar).
+4. Assurez-vous que le fichier .JAR exécutable est présent dans le dépôt (mediatheque.jar).
 
-4. Lancez l’application via le fichier JAR :
+5. Lancez l’application via le fichier JAR :
 
 ## java -jar mediatheque.jar
 
 ## Astuce :
 
-## Vous pouvez aussi lancer l'application directement en double cliquant sur le fichier .jar en ouvrant manuellement le dossier du projet.
+Vous pouvez aussi lancer l'application directement en double cliquant sur le fichier .jar en ouvrant manuellement le dossier du projet.
 
 ## Arborescence du projet : 
 
@@ -63,5 +66,7 @@ projet_poo_java/
 
 
 👤 Auteur :
-POLUTELE Dylan
-Licencec MIAGE - 2025 
+
+
+## POLUTELE Dylan
+## Licence MIAGE - 2025 
