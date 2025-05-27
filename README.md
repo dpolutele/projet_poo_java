@@ -26,21 +26,26 @@
 
 🚀 Lancer le projet :
 
-1. Clonez le dépôt depuis GitHub :
+1. Assurez vous d'avoir une version Java récente (minimum Java 16) pour vérifier, lancer un terminal et executer la commande :
+
+## java --version
+
+2. Clonez le dépôt depuis GitHub :
 
 ```bash/powershell```
 
-git clone https://github.com/dpolutele/projet_poo_java.git
-cd projet_poo_java
+## git clone https://github.com/dpolutele/projet_poo_java.git
+## cd projet_poo_java
 
-2. Assurez-vous que le fichier JAR exécutable est présent dans le dépôt (mediatheque.jar).
+3. Assurez-vous que le fichier JAR exécutable est présent dans le dépôt (mediatheque.jar).
 
-3. Lancez l’application via le fichier JAR :
+4. Lancez l’application via le fichier JAR :
 
-java -jar mediatheque.jar
+## java -jar mediatheque.jar
 
-Astuce :
-Vous pouvez aussi lancer l'application directement dans votre IDE (Eclipse, IntelliJ IDEA, NetBeans, VS Code...) en ouvrant le dossier du projet et en exécutant la classe mediatheque.ui.Main (en lancant le RUN), assurez-vous également d'avoir une version de Java à jour et bien configuré (JAVA 16 ou +).
+## Astuce :
+
+Vous pouvez aussi lancer l'application directement dans votre IDE (Eclipse, IntelliJ IDEA, NetBeans, VS Code...) en ouvrant le dossier du projet et en exécutant la classe mediatheque.ui.Main (en lancant le RUN).
 
 
 ## Arborescence du projet : 
