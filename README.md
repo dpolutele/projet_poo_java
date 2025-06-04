@@ -9,6 +9,9 @@
 
 📚 L'application simule une médiathèque qui propose différents supports culturels (livres, CD, DVD) que les utilisateurs peuvent consulter ou emprunter. L'interface permet la gestion de ces supports via un menu interactif avec des boutons.
 
+❗ Remarque importante :
+Aucune base de données n’est utilisée dans ce projet. Tous les documents (livres, CD, DVD) sont créés et gérés directement dans la méthode main(). L’application fonctionne entièrement en mémoire, sans persistance des données.
+
 🔧 Fonctionnalités principales :
 - 🆕 Ajout initial de documents (dans le main).
 - 📃 Affichage : Tous les documents, Documents empruntés, Documents disponibles.
